@@ -3,157 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soporte Express | Expertos en Laptops y CCTV</title>
+
+    <title>Reparación de Laptops en Ciudad de Panamá | Soporte Express</title>
+
+    <meta name="description" content="Reparación profesional de laptops en Ciudad de Panamá. Servicio técnico a domicilio, diagnóstico rápido y atención inmediata por WhatsApp.">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --azul-logo: #004aad;    /* Azul principal de tu logo */
-            --celeste-logo: #00d4ff; /* El brillo de tu identidad */
-            --oscuro-tech: #0a192f;  /* Azul marino profundo para textos y footer */
-            --verde-wa: #25d366;     /* Verde WhatsApp */
+            --azul-logo: #004aad;
+            --celeste-logo: #00d4ff;
+            --oscuro-tech: #0a192f;
+            --verde-wa: #25d366;
             --blanco-puro: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-
         body { background-color: var(--blanco-puro); color: var(--oscuro-tech); line-height: 1.6; }
 
-        /* HEADER PROFESIONAL */
-        header { 
-            padding: 1rem 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
+        header {
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            position: sticky; top: 0; z-index: 1000;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
             border-bottom: 2px solid var(--azul-logo);
         }
 
         .logo-container { display: flex; align-items: center; gap: 12px; }
-        .logo-img { height: 55px; width: auto; }
-        .logo-text { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; text-transform: uppercase; color: var(--azul-logo); }
+        .logo-img { height: 55px; }
+        .logo-text { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; color: var(--azul-logo); }
         .logo-text span { color: var(--celeste-logo); }
 
-        /* HERO - PALETA DE TU LOGO */
-        .hero { 
-            padding: 7rem 5%; 
-            text-align: center; 
+        .hero {
+            padding: 7rem 5%;
+            text-align: center;
             background: linear-gradient(135deg, #eef9ff 0%, #ffffff 100%);
-            border-bottom: 1px solid #e2e8f0;
         }
 
-        .hero h1 { font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 1.5rem; color: var(--azul-logo); line-height: 1; }
-        .hero p { font-size: 1.3rem; color: #475569; max-width: 700px; margin: 0 auto 2.5rem; }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: var(--azul-logo);
+        }
 
-        /* BOTÓN MAGNÉTICO */
-        .btn-principal { 
-            background: var(--verde-wa); 
-            color: white; 
-            padding: 1.2rem 3rem; 
-            border-radius: 50px; 
-            text-decoration: none; 
-            font-weight: 800; 
+        .hero p {
+            font-size: 1.2rem;
+            color: #475569;
+            max-width: 750px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .btn-principal {
+            background: var(--verde-wa);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
             font-size: 1.2rem;
             display: inline-flex;
             align-items: center;
             gap: 12px;
             box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
-        }
-        .btn-principal:hover { transform: translateY(-5px); background: #1eb956; box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4); }
-
-        /* CARDS DE SERVICIO */
-        .servicios { padding: 5rem 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
-        .card { 
-            padding: 3rem 2rem; 
-            border-radius: 25px; 
-            background: white; 
-            border-top: 5px solid var(--azul-logo);
-            box-shadow: 0 10px 40px rgba(0,74,173,0.05);
-            text-align: center; 
             transition: 0.3s;
         }
-        .card:hover { transform: translateY(-10px); border-top-color: var(--celeste-logo); }
-        .card .icon { font-size: 3rem; margin-bottom: 1.5rem; display: block; filter: drop-shadow(0 5px 10px rgba(0,212,255,0.2)); }
-        .card h3 { font-size: 1.6rem; font-weight: 700; color: var(--azul-logo); margin-bottom: 1rem; }
 
-        /* COBERTURA */
-        .cobertura { 
-            background: var(--oscuro-tech); 
-            color: white; 
-            padding: 5rem 5%; 
-            text-align: center; 
-            clip-path: ellipse(150% 100% at 50% 100%);
+        .btn-principal:hover {
+            transform: translateY(-5px);
+            background: #1eb956;
         }
-        .cobertura h2 { font-size: 2.2rem; margin-bottom: 2rem; color: var(--celeste-logo); }
-        .tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
-        .tag { border: 1px solid var(--celeste-logo); padding: 0.6rem 1.5rem; border-radius: 100px; font-weight: 600; font-size: 0.9rem; }
 
-        /* FOOTER */
-        footer { background: var(--oscuro-tech); padding: 3rem 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.05); }
+        .servicios {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            padding: 3rem 2rem;
+            border-radius: 25px;
+            background: white;
+            border-top: 5px solid var(--azul-logo);
+            box-shadow: 0 10px 40px rgba(0,74,173,0.05);
+            text-align: center;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            color: var(--azul-logo);
+            margin-bottom: 1rem;
+        }
+
+        .cobertura {
+            background: var(--oscuro-tech);
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .cobertura h2 {
+            color: var(--celeste-logo);
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .tag {
+            border: 1px solid var(--celeste-logo);
+            padding: 0.6rem 1.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--oscuro-tech);
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
         footer p { color: #94a3b8; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .logo-text { font-size: 1.2rem; }
+            .hero h1 { font-size: 2.3rem; }
         }
     </style>
 </head>
+
 <body>
 
-    <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Soporte Express Logo" class="logo-img" onerror="this.style.display='none'">
-            <div class="logo-text">SOPORTE<span>EXPRESS</span></div>
-        </div>
-        <a href="https://wa.link/58tz4e" target="_blank" style="text-decoration:none; color:var(--azul-logo); font-weight:800;">CONTACTO</a>
-    </header>
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="Soporte Express Panamá" class="logo-img" onerror="this.style.display='none'">
+        <div class="logo-text">SOPORTE<span>EXPRESS</span></div>
+    </div>
+    <a href="https://wa.link/58tz4e" target="_blank" style="font-weight:800; text-decoration:none; color:var(--azul-logo);">
+        WhatsApp
+    </a>
+</header>
 
-    <section class="hero">
-        <h1>Reparación técnica de alto nivel.</h1>
-        <p>Expertos en revivir tu laptop y asegurar tu hogar con CCTV. Calidad certificada a domicilio en la Ciudad de Panamá.</p>
-        <a href="https://wa.link/58tz4e" target="_blank" class="btn-principal">
-            💬 ¡Chatear por WhatsApp ahora!
-        </a>
-    </section>
+<section class="hero">
+    <h1>Reparación de laptops en Ciudad de Panamá</h1>
+    <p>
+        ¿Tu laptop está lenta, no enciende o se sobrecalienta?  
+        Ofrecemos <strong>servicio técnico profesional a domicilio</strong> en Ciudad de Panamá, con diagnóstico rápido y soluciones reales.
+    </p>
+    <a href="https://wa.link/58tz4e" target="_blank" class="btn-principal">
+        💬 Diagnóstico inmediato por WhatsApp
+    </a>
+</section>
 
-    <section class="servicios">
-        <div class="card">
-            <span class="icon">💻</span>
-            <h3>Laptops & PC</h3>
-            <p>Reparación inmediata de hardware y software para todas las marcas. Especialistas en optimización de rendimiento.</p>
-        </div>
-        <div class="card">
-            <span class="icon">🛡️</span>
-            <h3>CCTV & Seguridad</h3>
-            <p>Blindamos tu seguridad con cámaras HD e instalación profesional con acceso remoto desde tu celular.</p>
-        </div>
-        <div class="card">
-            <span class="icon">🏠</span>
-            <h3>Soporte Local</h3>
-            <p>Servicio express en tu hogar u oficina. Sin demoras, soluciones técnicas reales en el sitio.</p>
-        </div>
-    </section>
+<section class="servicios">
+    <div class="card">
+        <h2>Reparación de Laptops</h2>
+        <p>Solucionamos fallas de encendido, lentitud, sobrecalentamiento, pantallas dañadas y problemas de software en todas las marcas.</p>
+    </div>
 
-    <section class="cobertura">
-        <h2>Cobertura en Panamá</h2>
-        <div class="tags">
-            <div class="tag">Costa del Este</div>
-            <div class="tag">Condado del Rey</div>
-            <div class="tag">San Francisco</div>
-            <div class="tag">Brisas del Golf</div>
-            <div class="tag">Bethania</div>
-            <div class="tag">Vía España</div>
-            <div class="tag">Albrook</div>
-            <div class="tag">Ancón</div>
-            <div class="tag">Clayton</div>
-        </div>
-    </section>
+    <div class="card">
+        <h2>Optimización y Mantenimiento</h2>
+        <p>Aumenta el rendimiento de tu laptop con limpieza interna, cambio a SSD, instalación de sistema y ajustes profesionales.</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Soporte Express Panamá | Eficiencia y Garantía Técnica.</p>
-    </footer>
+    <div class="card">
+        <h2>Servicio Técnico a Domicilio</h2>
+        <p>Atendemos en tu hogar u oficina en Ciudad de Panamá, sin que tengas que trasladar tu equipo.</p>
+    </div>
+</section>
+
+<section class="cobertura">
+    <h2>Atención en Ciudad de Panamá</h2>
+    <div class="tags">
+        <div class="tag">San Francisco</div>
+        <div class="tag">Vía España</div>
+        <div class="tag">Bethania</div>
+        <div class="tag">Costa del Este</div>
+        <div class="tag">Condado del Rey</div>
+        <div class="tag">Brisas del Golf</div>
+        <div class="tag">Albrook</div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Soporte Express Panamá | Reparación profesional de laptops</p>
+</footer>
 
 </body>
 </html>
