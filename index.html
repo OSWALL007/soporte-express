@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Reparación de Laptops en Ciudad de Panamá | Soporte Express</title>
-
     <meta name="description" content="Reparación profesional de laptops en Ciudad de Panamá. Servicio técnico a domicilio, diagnóstico rápido y atención inmediata por WhatsApp.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -19,9 +18,21 @@
             --blanco-puro: #ffffff;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--blanco-puro); color: var(--oscuro-tech); line-height: 1.6; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
+        body {
+            background-color: var(--blanco-puro);
+            color: var(--oscuro-tech);
+            line-height: 1.6;
+            word-wrap: break-word;
+        }
+
+        /* HEADER */
         header {
             padding: 1rem 5%;
             display: flex;
@@ -34,11 +45,28 @@
             border-bottom: 2px solid var(--azul-logo);
         }
 
-        .logo-container { display: flex; align-items: center; gap: 12px; }
-        .logo-img { height: 55px; }
-        .logo-text { font-weight: 900; font-size: 1.5rem; text-transform: uppercase; color: var(--azul-logo); }
-        .logo-text span { color: var(--celeste-logo); }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
 
+        .logo-img {
+            height: 55px;
+        }
+
+        .logo-text {
+            font-weight: 900;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: var(--azul-logo);
+        }
+
+        .logo-text span {
+            color: var(--celeste-logo);
+        }
+
+        /* HERO */
         .hero {
             padding: 7rem 5%;
             text-align: center;
@@ -55,7 +83,7 @@
         .hero p {
             font-size: 1.2rem;
             color: #475569;
-            max-width: 750px;
+            max-width: 760px;
             margin: 0 auto 2.5rem;
         }
 
@@ -79,6 +107,7 @@
             background: #1eb956;
         }
 
+        /* SERVICIOS */
         .servicios {
             padding: 5rem 5%;
             display: grid;
@@ -93,6 +122,11 @@
             border-top: 5px solid var(--azul-logo);
             box-shadow: 0 10px 40px rgba(0,74,173,0.05);
             text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
         }
 
         .card h2 {
@@ -101,6 +135,7 @@
             margin-bottom: 1rem;
         }
 
+        /* COBERTURA */
         .cobertura {
             background: var(--oscuro-tech);
             color: white;
@@ -111,6 +146,7 @@
         .cobertura h2 {
             color: var(--celeste-logo);
             margin-bottom: 1.5rem;
+            font-size: 2rem;
         }
 
         .tags {
@@ -125,18 +161,61 @@
             padding: 0.6rem 1.5rem;
             border-radius: 100px;
             font-weight: 600;
+            font-size: 0.9rem;
         }
 
+        /* FOOTER */
         footer {
             background: var(--oscuro-tech);
             padding: 3rem 5%;
             text-align: center;
         }
 
-        footer p { color: #94a3b8; }
+        footer p {
+            color: #94a3b8;
+        }
 
+        /* WHATSAPP FLOTANTE */
+        .wa-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 62px;
+            height: 62px;
+            background: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            z-index: 2000;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+            text-decoration: none;
+        }
+
+        .wa-float:hover {
+            background: #1eb956;
+        }
+
+        /* RESPONSIVE FINO */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.3rem; }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+                padding: 0.8rem 5%;
+            }
+
+            .logo-text {
+                font-size: 1.3rem;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -157,7 +236,7 @@
     <h1>Reparación de laptops en Ciudad de Panamá</h1>
     <p>
         ¿Tu laptop está lenta, no enciende o se sobrecalienta?  
-        Ofrecemos <strong>servicio técnico profesional a domicilio</strong> en Ciudad de Panamá, con diagnóstico rápido y soluciones reales.
+        Brindamos <strong>servicio técnico profesional a domicilio</strong> en Ciudad de Panamá, con diagnóstico rápido y atención directa.
     </p>
     <a href="https://wa.link/58tz4e" target="_blank" class="btn-principal">
         💬 Diagnóstico inmediato por WhatsApp
@@ -172,12 +251,12 @@
 
     <div class="card">
         <h2>Optimización y Mantenimiento</h2>
-        <p>Aumenta el rendimiento de tu laptop con limpieza interna, cambio a SSD, instalación de sistema y ajustes profesionales.</p>
+        <p>Limpieza interna, cambio a SSD, reinstalación de sistema y optimización profesional para que tu laptop rinda como debe.</p>
     </div>
 
     <div class="card">
         <h2>Servicio Técnico a Domicilio</h2>
-        <p>Atendemos en tu hogar u oficina en Ciudad de Panamá, sin que tengas que trasladar tu equipo.</p>
+        <p>Atención en tu hogar u oficina en Ciudad de Panamá, sin perder tiempo trasladando tu equipo.</p>
     </div>
 </section>
 
@@ -197,6 +276,14 @@
 <footer>
     <p>&copy; 2026 Soporte Express Panamá | Reparación profesional de laptops</p>
 </footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.link/58tz4e"
+   class="wa-float"
+   target="_blank"
+   aria-label="WhatsApp Soporte Express">
+    💬
+</a>
 
 </body>
 </html>
