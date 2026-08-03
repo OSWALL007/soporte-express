@@ -1,3 +1,7 @@
-# Soporte Express Panamá — Web v2.0
+# Soporte Express
 
-Sitio estático optimizado para GitHub Pages.
+Sitio web oficial de Soporte Express Panamá.
+
+Servicios de soporte técnico, reparación de laptops y soluciones IT.
+
+https://oswall007.github.io/soporte-express/
