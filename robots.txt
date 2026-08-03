@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oswall007.github.io/soporte-express/sitemap.xml

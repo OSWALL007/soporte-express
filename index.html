@@ -1,290 +1,328 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-PA">
 <head>
-    <meta name="google-site-verification" content="LdEDByQbOXHiYJCBHhg4-czA5VT-RFM37M4ATJJMz9c" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="LdEDByQbOXHiYJCBHhg4-czA5VT-RFM37M4ATJJMz9c">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#0a192f">
 
-    <title>Reparación de Laptops en Ciudad de Panamá | Soporte Express</title>
-    <meta name="description" content="Reparación profesional de laptops en Ciudad de Panamá. Servicio técnico a domicilio, diagnóstico rápido y atención inmediata por WhatsApp.">
+  <title>Reparación de Laptops y Soporte Técnico en Panamá | Soporte Express</title>
+  <meta name="description" content="Reparación de laptops y PC en Ciudad de Panamá. Cambio a SSD, mantenimiento, soporte IT a domicilio y diagnóstico por WhatsApp.">
+  <link rel="canonical" href="https://oswall007.github.io/soporte-express/">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PA">
+  <meta property="og:title" content="Soporte Express | Reparación de Laptops en Panamá">
+  <meta property="og:description" content="Servicio técnico para laptops y PC, cambio a SSD, mantenimiento y atención a domicilio en Ciudad de Panamá.">
+  <meta property="og:url" content="https://oswall007.github.io/soporte-express/">
+  <meta property="og:image" content="https://oswall007.github.io/soporte-express/logo.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-    <style>
-        :root {
-            --azul-logo: #004aad;
-            --celeste-logo: #00d4ff;
-            --oscuro-tech: #0a192f;
-            --verde-wa: #25d366;
-            --blanco-puro: #ffffff;
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Soporte Express Panamá",
+    "url": "https://oswall007.github.io/soporte-express/",
+    "logo": "https://oswall007.github.io/soporte-express/logo.png",
+    "image": "https://oswall007.github.io/soporte-express/logo.png",
+    "telephone": "+50765011249",
+    "priceRange": "$$",
+    "description": "Servicio técnico para laptops y computadoras en Ciudad de Panamá, con mantenimiento, cambio a SSD, soporte IT a domicilio y diagnóstico remoto.",
+    "areaServed": {
+      "@type": "City",
+      "name": "Ciudad de Panamá"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+50765011249",
+      "contactType": "customer support",
+      "availableLanguage": "Spanish"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios técnicos",
+      "itemListElement": [
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reparación de laptops y PC"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Cambio de disco mecánico a SSD"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Mantenimiento preventivo y limpieza interna"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Soporte IT a domicilio"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Diagnóstico y soporte remoto"}},
+        {"@type":"Offer","itemOffered":{"@type":"Service","name":"Instalación y configuración de cámaras CCTV"}}
+      ]
+    }
+  }
+  </script>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--blanco-puro);
-            color: var(--oscuro-tech);
-            line-height: 1.6;
-            word-wrap: break-word;
-        }
-
-        /* HEADER */
-        header {
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--azul-logo);
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-img {
-            height: 55px;
-        }
-
-        .logo-text {
-            font-weight: 900;
-            font-size: 1.5rem;
-            text-transform: uppercase;
-            color: var(--azul-logo);
-        }
-
-        .logo-text span {
-            color: var(--celeste-logo);
-        }
-
-        /* HERO */
-        .hero {
-            padding: 7rem 5%;
-            text-align: center;
-            background: linear-gradient(135deg, #eef9ff 0%, #ffffff 100%);
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 900;
-            margin-bottom: 1.5rem;
-            color: var(--azul-logo);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #475569;
-            max-width: 760px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .btn-principal {
-            background: var(--verde-wa);
-            color: white;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.2rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.3);
-            transition: 0.3s;
-        }
-
-        .btn-principal:hover {
-            transform: translateY(-5px);
-            background: #1eb956;
-        }
-
-        /* SERVICIOS */
-        .servicios {
-            padding: 5rem 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            padding: 3rem 2rem;
-            border-radius: 25px;
-            background: white;
-            border-top: 5px solid var(--azul-logo);
-            box-shadow: 0 10px 40px rgba(0,74,173,0.05);
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .card h2 {
-            font-size: 1.5rem;
-            color: var(--azul-logo);
-            margin-bottom: 1rem;
-        }
-
-        /* COBERTURA */
-        .cobertura {
-            background: var(--oscuro-tech);
-            color: white;
-            padding: 5rem 5%;
-            text-align: center;
-        }
-
-        .cobertura h2 {
-            color: var(--celeste-logo);
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .tag {
-            border: 1px solid var(--celeste-logo);
-            padding: 0.6rem 1.5rem;
-            border-radius: 100px;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--oscuro-tech);
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        footer p {
-            color: #94a3b8;
-        }
-
-        /* WHATSAPP FLOTANTE */
-        .wa-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 62px;
-            height: 62px;
-            background: #25d366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            z-index: 2000;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-            text-decoration: none;
-        }
-
-        .wa-float:hover {
-            background: #1eb956;
-        }
-
-        /* RESPONSIVE FINO */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                gap: 12px;
-                padding: 0.8rem 5%;
-            }
-
-            .logo-text {
-                font-size: 1.3rem;
-                text-align: center;
-            }
-        }
-    </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Atienden laptops y computadoras a domicilio?",
+        "acceptedAnswer": {"@type":"Answer","text":"Sí. Soporte Express ofrece atención técnica en hogares y oficinas dentro de Ciudad de Panamá, según disponibilidad y tipo de falla."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Un SSD puede mejorar una laptop lenta?",
+        "acceptedAnswer": {"@type":"Answer","text":"En equipos que todavía usan disco mecánico, cambiar a SSD puede reducir de forma notable los tiempos de arranque y apertura de programas. Primero se realiza un diagnóstico para confirmar compatibilidad."}
+      },
+      {
+        "@type": "Question",
+        "name": "¿Ofrecen diagnóstico remoto?",
+        "acceptedAnswer": {"@type":"Answer","text":"Sí. Algunos problemas de Windows, programas, configuración y rendimiento pueden diagnosticarse o resolverse de forma remota."}
+      }
+    ]
+  }
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
-<header>
-    <div class="logo-container">
-        <img src="logo.png" alt="Soporte Express Panamá" class="logo-img" onerror="this.style.display='none'">
-        <div class="logo-text">SOPORTE<span>EXPRESS</span></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Inicio de Soporte Express">
+        <img src="logo.png" alt="Logo de Soporte Express" width="52" height="52">
+        <span class="brand-name"><span>Soporte</span><span>Express Panamá</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="header-cta" href="https://wa.link/58tz4e" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
     </div>
-    <a href="https://wa.link/58tz4e" target="_blank" style="font-weight:800; text-decoration:none; color:var(--azul-logo);">
-        WhatsApp
-    </a>
-</header>
+  </header>
 
-<section class="hero">
-    <h1>Reparación de laptops en Ciudad de Panamá</h1>
-    <p>
-        ¿Tu laptop está lenta, no enciende o se sobrecalienta?  
-        Brindamos <strong>servicio técnico profesional a domicilio</strong> en Ciudad de Panamá, con diagnóstico rápido y atención directa.
-    </p>
-    <a href="https://wa.link/58tz4e" target="_blank" class="btn-principal">
-        💬 Diagnóstico inmediato por WhatsApp
-    </a>
-</section>
+  <main id="contenido">
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">Servicio técnico local en Panamá</span>
+        <h1>Tu laptop vuelve a <strong>funcionar como debe</strong></h1>
+        <p class="hero-lead">Reparación de laptops y PC, cambio a SSD, mantenimiento preventivo, soporte IT a domicilio y diagnóstico remoto en Ciudad de Panamá.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+          <a class="btn btn-secondary" href="reparacion-laptops-panama.html">Ver reparación de laptops</a>
+        </div>
+      </div>
+    </section>
 
-<section class="servicios">
-    <div class="card">
-        <h2>Reparación de Laptops</h2>
-        <p>Solucionamos fallas de encendido, lentitud, sobrecalentamiento, pantallas dañadas y problemas de software en todas las marcas.</p>
+    <section class="trust-strip" aria-label="Indicadores de confianza">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>5.0 ★ en Google</strong><span>7 opiniones reales</span></div>
+        <div class="trust-item"><strong>Atención directa</strong><span>Sin intermediarios</span></div>
+        <div class="trust-item"><strong>Servicio local</strong><span>Ciudad de Panamá</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Soluciones claras</span>
+          <h2>Servicios técnicos para tu hogar u oficina</h2>
+          <p>Primero diagnosticamos. Luego explicamos las opciones y realizamos únicamente el trabajo necesario.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true">💻</div>
+            <h3>Reparación de laptops y PC</h3>
+            <p>Fallas de encendido, lentitud, sobrecalentamiento, pantallas, batería y problemas de sistema.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true">⚡</div>
+            <h3>Cambio de disco a SSD</h3>
+            <p>Evaluación de compatibilidad, instalación del SSD y migración o reinstalación del sistema.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true">🧹</div>
+            <h3>Mantenimiento preventivo</h3>
+            <p>Limpieza interna, revisión térmica y optimización para reducir ruido, calor y fallas.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true">🏠</div>
+            <h3>Soporte IT a domicilio</h3>
+            <p>Atención en hogares y oficinas para equipos, programas, impresoras y conectividad.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true">🌐</div>
+            <h3>Diagnóstico remoto</h3>
+            <p>Asistencia para errores de Windows, configuración, programas y problemas de rendimiento.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon-box" aria-hidden="true">📹</div>
+            <h3>Cámaras CCTV</h3>
+            <p>Instalación, configuración y mantenimiento básico de cámaras para hogares y negocios.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Confianza antes de reparar</span>
+          <h2>¿Por qué elegir Soporte Express?</h2>
+        </div>
+        <div class="reasons-grid">
+          <article class="reason-card"><h3>Diagnóstico claro</h3><p>Explicamos la falla y las alternativas antes de intervenir el equipo.</p></article>
+          <article class="reason-card"><h3>Atención local</h3><p>Servicio orientado a clientes de Ciudad de Panamá y zonas cercanas.</p></article>
+          <article class="reason-card"><h3>Comunicación directa</h3><p>Contacto por WhatsApp para cotizar, coordinar y dar seguimiento.</p></article>
+          <article class="reason-card"><h3>Soluciones completas</h3><p>Hardware, software, soporte remoto, domicilio y cámaras CCTV.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Equipos que atendemos</span>
+          <h2>Principales marcas del mercado</h2>
+          <p>Atendemos distintas marcas y configuraciones. La reparación depende de la disponibilidad de repuestos y del diagnóstico técnico.</p>
+        </div>
+        <div class="brand-grid" aria-label="Marcas de equipos atendidas">
+          <div class="brand-pill">HP</div>
+          <div class="brand-pill">Dell</div>
+          <div class="brand-pill">Lenovo</div>
+          <div class="brand-pill">ASUS</div>
+          <div class="brand-pill">Acer</div>
+          <div class="brand-pill">Apple</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="cobertura">
+      <div class="container coverage-wrap">
+        <div class="coverage-copy">
+          <div class="section-head left">
+            <span class="eyebrow">Cobertura</span>
+            <h2>Atención en Ciudad de Panamá</h2>
+            <p>Coordinamos visitas según ubicación, disponibilidad y tipo de servicio. También atendemos de forma remota cuando la falla lo permite.</p>
+          </div>
+          <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Consultar disponibilidad</a>
+        </div>
+        <div class="tags">
+          <span class="tag">San Francisco</span>
+          <span class="tag">Vía España</span>
+          <span class="tag">Bethania</span>
+          <span class="tag">Costa del Este</span>
+          <span class="tag">Condado del Rey</span>
+          <span class="tag">Brisas del Golf</span>
+          <span class="tag">Albrook</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="opiniones">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Opiniones verificables</span>
+          <h2>Lo que dicen nuestros clientes</h2>
+          <p>Reseñas publicadas por clientes en el Perfil de Negocio de Google de Soporte Express.</p>
+        </div>
+
+        <div class="rating-summary" aria-label="Calificación de 5 estrellas basada en 7 reseñas">
+          <span class="rating-score">5.0</span>
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="rating-copy">7 reseñas en Google</span>
+        </div>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Un servicio confiable y eficiente. La calidad del trabajo supera las expectativas; lo recomiendo.”</blockquote>
+            <div class="review-author"><span class="avatar">K</span><div><strong>Karina Calderón</strong><span>Reseña en Google</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Excelente servicio y, sobre todo, la confianza que brindan. Continúen así.”</blockquote>
+            <div class="review-author"><span class="avatar">M</span><div><strong>Manuel Noriega</strong><span>Reseña en Google</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Excelente, recomendado el servicio.”</blockquote>
+            <div class="review-author"><span class="avatar">E</span><div><strong>Evelyn Ávila</strong><span>Reseña en Google</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Servicio de reparación impecable. Cumplen con lo prometido y entregan resultados de calidad. 100% recomendado.”</blockquote>
+            <div class="review-author"><span class="avatar">H</span><div><strong>Hellen Coba</strong><span>Reseña en Google</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Excelente servicio.”</blockquote>
+            <div class="review-author"><span class="avatar">E</span><div><strong>Eric Jaén</strong><span>Reseña en Google</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Muy profesionales, puntuales y responsables. Muchas gracias.”</blockquote>
+            <div class="review-author"><span class="avatar">J</span><div><strong>Joahanna G. Franco P.</strong><span>Local Guide en Google</span></div></div>
+          </article>
+          <article class="review-card">
+            <div class="stars" aria-label="5 estrellas">★★★★★</div>
+            <blockquote>“Excelente atención.”</blockquote>
+            <div class="review-author"><span class="avatar">M</span><div><strong>Manuel Pimentel</strong><span>Reseña en Google</span></div></div>
+          </article>
+        </div>
+
+        <div class="reviews-cta">
+          <a class="btn btn-secondary" href="https://g.page/r/Ce-2ZlfCBTl7EAE/review" target="_blank" rel="noopener">Ver o dejar una opinión en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="preguntas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Antes de contactarnos</span>
+          <h2>Preguntas frecuentes</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>¿Atienden laptops y computadoras a domicilio?</summary>
+            <p>Sí. Coordinamos atención en hogares y oficinas de Ciudad de Panamá según la ubicación, la disponibilidad y el tipo de falla.</p>
+          </details>
+          <details>
+            <summary>¿Un SSD puede mejorar una laptop lenta?</summary>
+            <p>En equipos que todavía usan disco mecánico, el cambio a SSD puede reducir considerablemente el tiempo de arranque y apertura de programas. Primero verificamos compatibilidad y estado general.</p>
+          </details>
+          <details>
+            <summary>¿Ofrecen diagnóstico remoto?</summary>
+            <p>Sí. Algunos errores de Windows, programas, configuración y rendimiento pueden revisarse o resolverse remotamente.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuesta una reparación?</summary>
+            <p>El costo depende de la falla, el modelo y los repuestos necesarios. Puedes enviar por WhatsApp el modelo del equipo y una descripción del problema para una orientación inicial.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <h2>Cuéntanos qué problema tiene tu equipo</h2>
+        <p>Envíanos el modelo, una descripción de la falla y, si es posible, una foto o video. Te orientaremos sobre el siguiente paso.</p>
+        <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Hablar con Soporte Express</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Soporte Express Panamá</p>
+      <nav class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="reparacion-laptops-panama.html">Reparación de laptops</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="https://wa.link/58tz4e" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
     </div>
+  </footer>
 
-    <div class="card">
-        <h2>Optimización y Mantenimiento</h2>
-        <p>Limpieza interna, cambio a SSD, reinstalación de sistema y optimización profesional para que tu laptop rinda como debe.</p>
-    </div>
-
-    <div class="card">
-        <h2>Servicio Técnico a Domicilio</h2>
-        <p>Atención en tu hogar u oficina en Ciudad de Panamá, sin perder tiempo trasladando tu equipo.</p>
-    </div>
-</section>
-
-<section class="cobertura">
-    <h2>Atención en Ciudad de Panamá</h2>
-    <div class="tags">
-        <div class="tag">San Francisco</div>
-        <div class="tag">Vía España</div>
-        <div class="tag">Bethania</div>
-        <div class="tag">Costa del Este</div>
-        <div class="tag">Condado del Rey</div>
-        <div class="tag">Brisas del Golf</div>
-        <div class="tag">Albrook</div>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2026 Soporte Express Panamá | Reparación profesional de laptops</p>
-</footer>
-
-<!-- WHATSAPP FLOTANTE -->
-<a href="https://wa.link/58tz4e"
-   class="wa-float"
-   target="_blank"
-   aria-label="WhatsApp Soporte Express">
-    💬
-</a>
-
+  <a class="wa-float" href="https://wa.link/58tz4e" target="_blank" rel="noopener" aria-label="Contactar a Soporte Express por WhatsApp">✆</a>
 </body>
 </html>
