@@ -6,31 +6,35 @@
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#0a192f">
 
-  <script async src="https://www.googletagmanager.com/gtm.js?id=AW-663937271"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-663937271"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-<!-- Event snippet for Contacto conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    function gtag() {
+      dataLayer.push(arguments);
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-663937271/U_QYCPOHrLUdEPfBy7wC',
-      'value': 1.0,
-      'currency': 'USD',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+
+    gtag('js', new Date());
+    gtag('config', 'AW-663937271');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined') {
+          window.location = url;
+        }
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-663937271/U_QYCPOHrLUdEPfBy7wC',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+
+      return false;
+    }
+  </script>
 
   <title>Reparación de Laptops en Ciudad de Panamá | Soporte Express</title>
   <meta name="description" content="Servicio de reparación de laptops en Ciudad de Panamá: fallas de encendido, lentitud, sobrecalentamiento, SSD, mantenimiento y atención a domicilio.">
@@ -73,7 +77,7 @@ function gtag_report_conversion(url) {
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="./#servicios">Servicios</a>
         <a href="./#opiniones">Opiniones</a>
-        <a class="header-cta" href="https://wa.link/58tz4e" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="header-cta" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">WhatsApp</a>
       </nav>
     </div>
   </header>
@@ -85,7 +89,7 @@ function gtag_report_conversion(url) {
         <h1>Reparación de laptops en <strong>Ciudad de Panamá</strong></h1>
         <p class="hero-lead">Diagnóstico para problemas de encendido, lentitud, temperatura, batería, pantalla, almacenamiento y sistema operativo.</p>
         <div class="hero-actions" style="justify-content:flex-start">
-          <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Solicitar diagnóstico</a>
+          <a class="btn btn-primary" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">Solicitar diagnóstico</a>
           <a class="btn btn-secondary" href="./">Volver al inicio</a>
         </div>
       </div>
@@ -131,7 +135,7 @@ function gtag_report_conversion(url) {
           <div class="stars" aria-label="Calificación de 5 estrellas">★★★★★</div>
           <h2>Atención directa</h2>
           <p>Envíanos el modelo de la laptop, una descripción de la falla y una foto o video si está disponible.</p>
-          <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">Escribir por WhatsApp</a>
         </aside>
       </div>
     </section>
@@ -140,7 +144,7 @@ function gtag_report_conversion(url) {
       <div class="container">
         <h2>No vendemos milagros</h2>
         <p>Diagnosticamos, explicamos y resolvemos con información clara sobre el estado del equipo.</p>
-        <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Consultar mi laptop</a>
+        <a class="btn btn-primary" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">Consultar mi laptop</a>
       </div>
     </section>
   </main>
@@ -151,11 +155,11 @@ function gtag_report_conversion(url) {
       <nav class="footer-links" aria-label="Enlaces del pie de página">
         <a href="./">Inicio</a>
         <a href="./#opiniones">Opiniones</a>
-        <a href="https://wa.link/58tz4e" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">WhatsApp</a>
       </nav>
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.link/58tz4e" target="_blank" rel="noopener" aria-label="Contactar a Soporte Express por WhatsApp">✆</a>
+  <a class="wa-float" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener" aria-label="Contactar a Soporte Express por WhatsApp">✆</a>
 </body>
 </html>
