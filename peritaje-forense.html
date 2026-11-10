@@ -9,31 +9,35 @@
   <meta name="theme-color" content="#0b6bdc">
   <link rel="canonical" href="https://oswall007.github.io/soporte-express/peritaje-forense.html">
 
-  <script async src="https://www.googletagmanager.com/gtm.js?id=AW-663937271"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-663937271"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <!-- Event snippet for Contacto conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    function gtag() {
+      dataLayer.push(arguments);
     }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-663937271/U_QYCPOHrLUdEPfBy7wC',
-      'value': 1.0,
-      'currency': 'USD',
-      'event_callback': callback
-  });
-  return false;
-}
-</script>
+
+    gtag('js', new Date());
+    gtag('config', 'AW-663937271');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined') {
+          window.location = url;
+        }
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-663937271/U_QYCPOHrLUdEPfBy7wC',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+
+      return false;
+    }
+  </script>
 
 
   <meta property="og:locale" content="es_PA">
@@ -809,7 +813,7 @@ function gtag_report_conversion(url) {
         <a href="#servicios">Servicios</a>
         <a href="#proceso">Proceso</a>
         <a href="#preguntas">Preguntas</a>
-        <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">WhatsApp</a>
+        <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." onclick="return gtag_report_conversion(this.href);" rel="noopener">WhatsApp</a>
       </nav>
     </div>
   </header>
@@ -823,7 +827,7 @@ function gtag_report_conversion(url) {
           <p class="hero-copy">Asistencia técnica para abogados, auditores, empresas y particulares autorizados. Procedimientos documentados para adquirir, preservar y analizar información digital procurando no alterar el medio original.</p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">
+            <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." onclick="return gtag_report_conversion(this.href);" rel="noopener">
               Consultar un caso por WhatsApp
             </a>
             <a class="button button-secondary" href="#proceso">Conocer el proceso</a>
@@ -976,7 +980,7 @@ function gtag_report_conversion(url) {
         <div class="cta">
           <h2 id="titulo-contacto">¿Necesitas preservar información digital?</h2>
           <p>Describe brevemente el tipo de equipo y la situación. Te orientaremos sobre el siguiente paso y la forma segura de coordinar la recepción.</p>
-          <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">
+          <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." onclick="return gtag_report_conversion(this.href);" rel="noopener">
             WhatsApp: +507 6501-1249
           </a>
           <span class="cta-note">No envíes evidencia, contraseñas ni archivos confidenciales por WhatsApp. Úsalo únicamente para coordinar.</span>
@@ -991,7 +995,7 @@ function gtag_report_conversion(url) {
       <div class="footer-links" aria-label="Enlaces del pie de página">
         <a href="./">Inicio</a>
         <a href="./#servicios">Servicios técnicos</a>
-        <a href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." onclick="return gtag_report_conversion(this.href);" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </footer>
