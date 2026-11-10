@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informática Forense y Peritaje Digital en Panamá | Soporte Express</title>
+  <meta name="description" content="Preservación, adquisición y análisis técnico de evidencia digital en Panamá. Atención confidencial, trazabilidad, hashes criptográficos e informes técnicos.">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0b6bdc">
+  <link rel="canonical" href="https://oswall007.github.io/soporte-express/peritaje-forense.html">
+
+  <meta property="og:locale" content="es_PA">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Informática Forense y Peritaje Digital | Soporte Express Panamá">
+  <meta property="og:description" content="Preservación y análisis técnico de evidencia digital con procedimientos documentados y atención confidencial.">
+  <meta property="og:url" content="https://oswall007.github.io/soporte-express/peritaje-forense.html">
+  <meta property="og:site_name" content="Soporte Express Panamá">
+
+  <style>
+    :root {
+      --brand: #0b6bdc;
+      --brand-dark: #074fa7;
+      --brand-soft: #eaf4ff;
+      --accent: #f4cd37;
+      --success: #20c96b;
+      --success-dark: #15964d;
+      --ink: #0b1830;
+      --muted: #5a6678;
+      --line: #dfe6ef;
+      --surface: #ffffff;
+      --surface-alt: #f7f9fc;
+      --shadow: 0 18px 48px rgba(11, 24, 48, 0.10);
+      --radius: 22px;
+      --max: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--surface);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    svg {
+      display: block;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -60px;
+      left: 16px;
+      z-index: 100;
+      padding: 10px 14px;
+      border-radius: 10px;
+      color: #fff;
+      background: var(--ink);
+      font-weight: 800;
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(223, 230, 239, 0.9);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      object-fit: contain;
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 1.05;
+      text-transform: uppercase;
+    }
+
+    .brand-text span:last-child {
+      margin-top: 4px;
+      color: var(--brand);
+      font-size: 0.72rem;
+      letter-spacing: 0.23em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 0.94rem;
+      font-weight: 750;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+    }
+
+    .nav-links a:not(.button):hover,
+    .nav-links a:not(.button):focus-visible {
+      color: var(--brand);
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 24px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 850;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #fff;
+      background: var(--success);
+      box-shadow: 0 14px 30px rgba(32, 201, 107, 0.26);
+    }
+
+    .button-primary:hover,
+    .button-primary:focus-visible {
+      background: var(--success-dark);
+    }
+
+    .button-secondary {
+      border-color: #cfd8e5;
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .button-secondary:hover,
+    .button-secondary:focus-visible {
+      border-color: var(--brand);
+      color: var(--brand);
+      background: #fff;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0 64px;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(11, 107, 220, 0.16), transparent 35%),
+        radial-gradient(circle at 86% 12%, rgba(244, 205, 55, 0.22), transparent 32%),
+        linear-gradient(125deg, #f3f8ff 0%, #fffef8 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -140px;
+      bottom: -180px;
+      width: 420px;
+      height: 420px;
+      border: 70px solid rgba(11, 107, 220, 0.045);
+      border-radius: 50%;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 20px;
+      padding: 8px 13px;
+      border: 1px solid rgba(11, 107, 220, 0.18);
+      border-radius: 999px;
+      color: var(--brand-dark);
+      background: rgba(255, 255, 255, 0.72);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(244, 205, 55, 0.18);
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+    }
+
+    h1 {
+      max-width: 880px;
+      margin-inline: auto;
+      margin-bottom: 24px;
+      font-size: clamp(2.65rem, 7vw, 5.1rem);
+    }
+
+    h1 span {
+      color: var(--brand);
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      margin: 0 auto 32px;
+      color: #47566b;
+      font-size: clamp(1.05rem, 2.3vw, 1.25rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .trust-bar {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 62px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+    }
+
+    .trust-item {
+      padding: 22px;
+      text-align: center;
+    }
+
+    .trust-item + .trust-item {
+      border-left: 1px solid var(--line);
+    }
+
+    .trust-item strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 1rem;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .section {
+      padding: 92px 0;
+    }
+
+    .section-alt {
+      background: var(--surface-alt);
+    }
+
+    .section-head {
+      max-width: 720px;
+      margin: 0 auto 46px;
+      text-align: center;
+    }
+
+    .section-label {
+      display: block;
+      margin-bottom: 11px;
+      color: var(--brand);
+      font-size: 0.77rem;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .section-head h2,
+    .split-copy h2,
+    .cta h2 {
+      margin-bottom: 16px;
+      font-size: clamp(2rem, 4vw, 3.15rem);
+    }
+
+    .section-head p,
+    .split-copy > p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.06rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 12px 32px rgba(11, 24, 48, 0.055);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(11, 107, 220, 0.3);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      border-radius: 15px;
+      color: var(--brand);
+      background: var(--brand-soft);
+    }
+
+    .icon svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      counter-reset: steps;
+    }
+
+    .step {
+      position: relative;
+      padding: 28px 24px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      counter-increment: steps;
+    }
+
+    .step::before {
+      content: "0" counter(steps);
+      display: inline-grid;
+      min-width: 42px;
+      height: 42px;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      color: #fff;
+      background: var(--brand);
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .check-list {
+      display: grid;
+      gap: 15px;
+      margin: 28px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+      padding-left: 35px;
+      color: #334158;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--success);
+      font-size: 0.78rem;
+      font-weight: 900;
+    }
+
+    .notice {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border-radius: 24px;
+      color: #fff;
+      background: var(--ink);
+      box-shadow: var(--shadow);
+    }
+
+    .notice::after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      bottom: -70px;
+      width: 210px;
+      height: 210px;
+      border: 42px solid rgba(244, 205, 55, 0.11);
+      border-radius: 50%;
+    }
+
+    .notice h3 {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 14px;
+      font-size: 1.55rem;
+    }
+
+    .notice p {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 14px;
+      color: #c7d1df;
+    }
+
+    .notice a {
+      position: relative;
+      z-index: 1;
+      color: #9ccaff;
+      font-weight: 800;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin-inline: auto;
+    }
+
+    details {
+      border-bottom: 1px solid var(--line);
+    }
+
+    summary {
+      position: relative;
+      padding: 22px 48px 22px 0;
+      cursor: pointer;
+      list-style: none;
+      font-weight: 850;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 8px;
+      top: 16px;
+      color: var(--brand);
+      font-size: 1.8rem;
+      font-weight: 400;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      max-width: 760px;
+      margin: -4px 0 22px;
+      color: var(--muted);
+    }
+
+    .cta-wrap {
+      padding: 0 0 92px;
+    }
+
+    .cta {
+      position: relative;
+      overflow: hidden;
+      padding: 58px;
+      border-radius: 28px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand-dark), var(--brand));
+      text-align: center;
+      box-shadow: 0 24px 70px rgba(11, 107, 220, 0.25);
+    }
+
+    .cta::before,
+    .cta::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .cta::before {
+      top: -100px;
+      left: -75px;
+      width: 260px;
+      height: 260px;
+    }
+
+    .cta::after {
+      right: -45px;
+      bottom: -110px;
+      width: 300px;
+      height: 300px;
+    }
+
+    .cta > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta p {
+      max-width: 680px;
+      margin: 0 auto 26px;
+      color: #deecff;
+    }
+
+    .cta-note {
+      display: block;
+      margin-top: 16px;
+      color: #c8dcf5;
+      font-size: 0.83rem;
+    }
+
+    .site-footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      color: var(--brand);
+    }
+
+    :focus-visible {
+      outline: 3px solid rgba(11, 107, 220, 0.35);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 920px) {
+      .nav-links a:not(.button) {
+        display: none;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .split {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .site-header .button {
+        min-height: 44px;
+        padding: 0 17px;
+        font-size: 0.86rem;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+      }
+
+      .brand-text {
+        font-size: 0.84rem;
+      }
+
+      .brand-text span:last-child {
+        font-size: 0.6rem;
+      }
+
+      .hero {
+        padding-top: 72px;
+      }
+
+      h1 {
+        font-size: clamp(2.35rem, 12vw, 3.45rem);
+      }
+
+      .hero-actions {
+        display: grid;
+      }
+
+      .hero-actions .button {
+        width: 100%;
+      }
+
+      .trust-bar {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item + .trust-item {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .section {
+        padding: 72px 0;
+      }
+
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .card,
+      .notice {
+        padding: 26px;
+      }
+
+      .cta {
+        padding: 42px 24px;
+      }
+
+      .cta-wrap {
+        padding-bottom: 72px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Informática forense y análisis de evidencia digital",
+    "serviceType": "Preservación, adquisición y análisis técnico de evidencia digital",
+    "areaServed": {
+      "@type": "City",
+      "name": "Ciudad de Panamá"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Soporte Express Panamá",
+      "url": "https://oswall007.github.io/soporte-express/",
+      "telephone": "+50765011249"
+    },
+    "url": "https://oswall007.github.io/soporte-express/peritaje-forense.html"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="./" aria-label="Volver al inicio de Soporte Express">
+        <img class="brand-logo" src="logo.png" alt="" width="52" height="52">
+        <span class="brand-text">
+          Soporte Express
+          <span>Panamá</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Informática forense en Panamá</div>
+          <h1 id="titulo-principal">Preservación y análisis de <span>evidencia digital</span></h1>
+          <p class="hero-copy">Asistencia técnica para abogados, auditores, empresas y particulares autorizados. Procedimientos documentados para adquirir, preservar y analizar información digital procurando no alterar el medio original.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">
+              Consultar un caso por WhatsApp
+            </a>
+            <a class="button button-secondary" href="#proceso">Conocer el proceso</a>
+          </div>
+        </div>
+
+        <div class="trust-bar" aria-label="Características del servicio">
+          <div class="trust-item">
+            <strong>Atención confidencial</strong>
+            <span>Información tratada según el alcance autorizado</span>
+          </div>
+          <div class="trust-item">
+            <strong>Integridad verificable</strong>
+            <span>Hashes SHA-256 o SHA-512 cuando corresponda</span>
+          </div>
+          <div class="trust-item">
+            <strong>Servicio local</strong>
+            <span>Ciudad de Panamá</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios" aria-labelledby="titulo-servicios">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Servicios especializados</span>
+          <h2 id="titulo-servicios">Un proceso técnico, documentado y proporcional al caso</h2>
+          <p>El alcance se define antes de intervenir el dispositivo. Cada trabajo depende del tipo de equipo, su estado, el cifrado y la autorización disponible.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3l7 4v5c0 4.6-2.9 7.5-7 9-4.1-1.5-7-4.4-7-9V7l7-4zM9 12l2 2 4-4"/>
+              </svg>
+            </div>
+            <h3>Preservación y adquisición</h3>
+            <p>Registro de recepción y manejo, controles de escritura cuando el medio lo permite, copias forenses y cálculo de hashes para documentar la integridad.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" stroke-width="2"/>
+                <path stroke-linecap="round" stroke-width="2" d="M20 20l-4-4M8 9h6M8 12h4"/>
+              </svg>
+            </div>
+            <h3>Análisis y recuperación</h3>
+            <p>Revisión de metadatos, cronologías, registros del sistema y archivos eliminados. La recuperación no siempre es posible y depende del estado del medio.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="3" stroke-width="2"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9h6v6H9zM12 4V2M12 22v-2M4 12H2M22 12h-2"/>
+              </svg>
+            </div>
+            <h3>Respuesta a incidentes</h3>
+            <p>Orientación inicial para contener el incidente, preservar registros e identificar indicios de acceso no autorizado sin destruir información relevante.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="proceso" aria-labelledby="titulo-proceso">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Cómo trabajamos</span>
+          <h2 id="titulo-proceso">Cuatro etapas para mantener claridad y trazabilidad</h2>
+          <p>Antes de empezar se confirma quién autoriza el análisis, qué dispositivos están incluidos y cuál es la pregunta técnica que debe responderse.</p>
+        </div>
+
+        <div class="process">
+          <article class="step">
+            <h3>Consulta y alcance</h3>
+            <p>Se revisa el contexto sin solicitar evidencia sensible por mensajería.</p>
+          </article>
+          <article class="step">
+            <h3>Autorización y recepción</h3>
+            <p>Se identifica el medio, la persona responsable y el alcance autorizado.</p>
+          </article>
+          <article class="step">
+            <h3>Adquisición y análisis</h3>
+            <p>Se documenta el procedimiento y se aplican controles de integridad.</p>
+          </article>
+          <article class="step">
+            <h3>Hallazgos e informe</h3>
+            <p>Se presentan resultados, limitaciones técnicas y anexos acordados.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="titulo-responsable">
+      <div class="container split">
+        <div class="split-copy">
+          <span class="section-label">Tratamiento responsable</span>
+          <h2 id="titulo-responsable">La evidencia exige más que una simple recuperación de archivos</h2>
+          <p>La metodología debe proteger el dispositivo, limitar el tratamiento a lo autorizado y dejar constancia de las acciones realizadas.</p>
+          <ul class="check-list">
+            <li>Autorización previa del propietario o de la autoridad competente.</li>
+            <li>Registro de dispositivos, fechas, responsables y transferencias.</li>
+            <li>Separación entre el medio original y las copias de trabajo.</li>
+            <li>Informe que distinga hallazgos, interpretación y limitaciones.</li>
+          </ul>
+        </div>
+
+        <aside class="notice" aria-label="Información legal importante">
+          <h3>Información importante</h3>
+          <p>La Ley 81 de 2019 regula el tratamiento de datos personales en Panamá. Todo análisis debe contar con una base legítima y aplicar medidas de seguridad y confidencialidad.</p>
+          <p>La admisibilidad de una evidencia depende del caso y de la valoración de la autoridad competente. Este servicio técnico no sustituye asesoría jurídica.</p>
+          <a href="https://www.gacetaoficial.gob.pa/documento/55484" target="_blank" rel="noopener">Consultar la Ley 81 en la Gaceta Oficial</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="preguntas" aria-labelledby="titulo-preguntas">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-label">Antes de contactarnos</span>
+          <h2 id="titulo-preguntas">Preguntas frecuentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>¿Quién puede solicitar un análisis forense?</summary>
+            <p>El propietario del equipo, una persona debidamente autorizada o una autoridad competente. Antes de recibir el dispositivo se valida la autorización y el alcance.</p>
+          </details>
+          <details>
+            <summary>¿Se puede recuperar toda la información eliminada?</summary>
+            <p>No siempre. El resultado depende del tipo de almacenamiento, el uso posterior al borrado, el cifrado, daños físicos y otros factores. La evaluación inicial permite explicar las posibilidades y limitaciones.</p>
+          </details>
+          <details>
+            <summary>¿El informe garantiza que la evidencia será admitida judicialmente?</summary>
+            <p>No. Se documentan la metodología, la integridad y los hallazgos técnicos, pero la admisión y valoración corresponden a las autoridades y profesionales jurídicos involucrados.</p>
+          </details>
+          <details>
+            <summary>¿Qué debo hacer si sospecho de un incidente?</summary>
+            <p>Evita seguir usando, actualizando o reiniciando el equipo si hacerlo no es indispensable para la seguridad. No borres archivos ni ejecutes herramientas de limpieza. Contacta primero para recibir orientación según el caso.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-wrap" aria-labelledby="titulo-contacto">
+      <div class="container">
+        <div class="cta">
+          <h2 id="titulo-contacto">¿Necesitas preservar información digital?</h2>
+          <p>Describe brevemente el tipo de equipo y la situación. Te orientaremos sobre el siguiente paso y la forma segura de coordinar la recepción.</p>
+          <a class="button button-primary" href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">
+            WhatsApp: +507 6501-1249
+          </a>
+          <span class="cta-note">No envíes evidencia, contraseñas ni archivos confidenciales por WhatsApp. Úsalo únicamente para coordinar.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Soporte Express Panamá</span>
+      <div class="footer-links" aria-label="Enlaces del pie de página">
+        <a href="./">Inicio</a>
+        <a href="./#servicios">Servicios técnicos</a>
+        <a href="https://wa.me/50765011249?text=Hola%2C%20requiero%20orientaci%C3%B3n%20sobre%20un%20servicio%20de%20inform%C3%A1tica%20forense." target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
