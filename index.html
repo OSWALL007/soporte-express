@@ -6,43 +6,36 @@
   <meta name="google-site-verification" content="LdEDByQbOXHiYJCBHhg4-czA5VT-RFM37M4ATJJMz9c">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#0a192f">
-  <script async src="https://www.googletagmanager.com/gtm.js?id=AW-663937271"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
+  <!-- Google tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-663937271"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  <!-- Event snippet for Contacto conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
+    function gtag() {
+      dataLayer.push(arguments);
     }
-  };
-  
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof url !== 'undefined') {
-      window.location = url;
+
+    gtag('js', new Date());
+    gtag('config', 'AW-663937271');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof url !== 'undefined') {
+          window.location = url;
+        }
+      };
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-663937271/U_QYCPOHrLUdEPfBy7wC',
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+
+      return false;
     }
-  };
+  </script>
 
-  gtag('event', 'conversion', {
-    'send_to': 'AW-663937271/U_QYCPOHrLUdEPfBy7wC',
-    'value': 1.0,
-    'currency': 'USD',
-    'event_callback': callback
-  });
-
-  return false;
-}
-</script>
-
-  
   <title>Reparación de Laptops y Soporte Técnico en Panamá | Soporte Express</title>
   <meta name="description" content="Reparación de laptops y PC en Ciudad de Panamá. Cambio a SSD, mantenimiento, soporte IT a domicilio y diagnóstico por WhatsApp.">
   <link rel="canonical" href="https://oswall007.github.io/soporte-express/">
@@ -131,7 +124,7 @@ function gtag_report_conversion(url) {
         <a href="peritaje-forense.html">Forense</a>
         <a href="#opiniones">Opiniones</a>
         <a href="#preguntas">Preguntas</a>
-        <a class="header-cta" href="https://wa.link/58tz4e" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="header-cta" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">WhatsApp</a>
       </nav>
     </div>
   </header>
@@ -143,7 +136,7 @@ function gtag_report_conversion(url) {
         <h1>Tu laptop vuelve a <strong>funcionar como debe</strong></h1>
         <p class="hero-lead">Reparación de laptops y PC, cambio a SSD, mantenimiento preventivo, soporte IT a domicilio y diagnóstico remoto en Ciudad de Panamá.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
+          <a class="btn btn-primary" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">Solicitar diagnóstico por WhatsApp</a>
           <a class="btn btn-secondary" href="reparacion-laptops-panama.html">Ver reparación de laptops</a>
         </div>
       </div>
@@ -241,7 +234,7 @@ function gtag_report_conversion(url) {
             <h2>Atención en Ciudad de Panamá</h2>
             <p>Coordinamos visitas según ubicación, disponibilidad y tipo de servicio. También atendemos de forma remota cuando la falla lo permite.</p>
           </div>
-          <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Consultar disponibilidad</a>
+          <a class="btn btn-primary" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">Consultar disponibilidad</a>
         </div>
         <div class="tags">
           <span class="tag">San Francisco</span>
@@ -344,7 +337,7 @@ function gtag_report_conversion(url) {
       <div class="container">
         <h2>Cuéntanos qué problema tiene tu equipo</h2>
         <p>Envíanos el modelo, una descripción de la falla y, si es posible, una foto o video. Te orientaremos sobre el siguiente paso.</p>
-        <a class="btn btn-primary" href="https://wa.link/58tz4e" target="_blank" rel="noopener">Hablar con Soporte Express</a>
+        <a class="btn btn-primary" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">Hablar con Soporte Express</a>
       </div>
     </section>
   </main>
@@ -355,11 +348,11 @@ function gtag_report_conversion(url) {
       <nav class="footer-links" aria-label="Enlaces del pie de página">
         <a href="reparacion-laptops-panama.html">Reparación de laptops</a>
         <a href="#opiniones">Opiniones</a>
-        <a href="https://wa.link/58tz4e" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener">WhatsApp</a>
       </nav>
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.link/58tz4e" target="_blank" rel="noopener" aria-label="Contactar a Soporte Express por WhatsApp">✆</a>
+  <a class="wa-float" href="https://wa.link/58tz4e" onclick="return gtag_report_conversion(this.href);" rel="noopener" aria-label="Contactar a Soporte Express por WhatsApp">✆</a>
 </body>
 </html>
